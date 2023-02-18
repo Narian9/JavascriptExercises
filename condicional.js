@@ -123,7 +123,15 @@ console.log(piramidalNumber(3));
 // (nombre, a)
 // Debe regresar la proporcion del area del pais en acorde a el area de tierra en el planeta
 //('Russia', 17098242) -> Russia is 11.48%
-// ("USA", 9372610) -> "USA is 6.29%
+// ("USA", 9372610) -> "USA is 6.29%.
+
+const percentOfWorldArea = (country="country", area=0) =>{
+    const worldArea = 155438563.63;//
+
+    return `${country} is ${(area/worldArea) *100}%`
+}
+console.log(percentOfWorldArea('Russia', 17098242));
+console.log(percentOfWorldArea("USA", 9372610));
 
 // Escribir una funcion que retorne 0 si el input es 1 y 1 si el input es 0
 // No se pueden utilizar condicionales, ternarios, negaciones ni operatores bit
