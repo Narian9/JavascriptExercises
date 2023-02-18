@@ -127,7 +127,6 @@ console.log(piramidalNumber(3));
 
 const percentOfWorldArea = (country="country", area=0) =>{
     const worldArea = 155438563.63;//
-
     return `${country} is ${(area/worldArea) *100}%`
 }
 console.log(percentOfWorldArea('Russia', 17098242));
@@ -135,7 +134,18 @@ console.log(percentOfWorldArea("USA", 9372610));
 
 // Escribir una funcion que retorne 0 si el input es 1 y 1 si el input es 0
 // No se pueden utilizar condicionales, ternarios, negaciones ni operatores bit
-
+const oneOrZero = (num) => {
+    switch (num) {
+        case 0:
+            return 1;
+        case 1:
+            return 0;           
+        default:
+           return "No es 0 ni 1";            
+    }
+}
+console.log(oneOrZero(0));
+console.log(oneOrZero(1));
 // Messenger bzzz
 // (0 ) n
 // Si no hay nadie -> "No hay nadie en linea"
