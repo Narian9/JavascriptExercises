@@ -97,6 +97,28 @@ console.log(recursiveFibonacci(15));
   // Encontrar el numero n de una figura piramidal triangular (tetrahedron)
 // (nivel) -> cantidad de numeritos
 
+/**espero un array [1,3,6,10,15] 
+ *           nivel [1,2,3,4,5,6]
+*/
+const piramidalNumber =(nivel) =>{
+    let sum = 0;
+    const arr = [];
+    for (let n = 1; n <= nivel; n++) {  
+        for (let i = n+1; i > n; i--) {
+            let number =0;
+            let tplus = arr ==null? 1:isNaN(arr[arr.length -1])?0:arr[arr.length -1]; 
+            number = n +tplus;
+            //console.log((n+i));
+            arr.push(number);
+            sum+=number;            
+        }     
+    }
+    return sum//
+}
+console.log(piramidalNumber(6));
+console.log(piramidalNumber(3));
+
+
 // Crear una funcion que tome el nombre de un pais y su area
 // (nombre, a)
 // Debe regresar la proporcion del area del pais en acorde a el area de tierra en el planeta
