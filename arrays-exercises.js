@@ -8,7 +8,7 @@
 //     arr.map((e) => {string+=e.slice(0,1)})
 //     return string;
 // };
-const secretNamefunction = arr => arr.reduce((a,r) => a+ r.slice(0,1) ,"")
+const secretNamefunction = arr => arr.sort().reduce((a,r) => a+ r.slice(0,1) ,"")
 
 console.log(secretNamefunction( ["Felipe", "Fer", "Zabdiel"] ));
 console.log(secretNamefunction( ['Phoebe', 'Ross', 'Chandler', 'Joey', 'Monica', 'Rachel'] ));
