@@ -156,17 +156,13 @@ console.log(oneOrZero(1));
 
 const messengerBz =(usersOnline, text="") =>{
     let outputText = text;
-    //console.log(usersOnline, text);
     if(usersOnline == 0 && text.length ==0){
         return "No hay nadie en linea";
     }else if ( usersOnline ==1 && text.length ==0){
         return `user${usersOnline} esta en linea` 
     }else if (usersOnline>1 ){
         outputText = `, user${usersOnline}`+ text;
-       //console.log(usersOnline-1,outputText);
-       
     }else if(usersOnline ==1 && text.length!==0){
-        //console.log(usersOnline, outputText, 1);
         outputText =`User${usersOnline} y${text} están en linea` ;
         messengerBz(usersOnline-1,outputText);
     }else {
