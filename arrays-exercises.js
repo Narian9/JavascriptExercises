@@ -3,21 +3,21 @@
 // secretName(['Phoebe', 'Ross', 'Chandler', 'Joey', 'Monica', 'Rachel']) -> CJMPRR
 // secretName(['Harry', 'Ron', 'Hermione']) -> HHR
 
-const secretNamefunction = arr => {
-    let string = "";
-    arr.map((e) => {string+=e.slice(0,1)})
-    return string;
-};
+// const secretNamefunction = arr => {
+//     let string = "";
+//     arr.map((e) => {string+=e.slice(0,1)})
+//     return string;
+// };
+const secretNamefunction = arr => arr.reduce((a,r) => a+ r.slice(0,1) ,"")
 
 console.log(secretNamefunction( ["Felipe", "Fer", "Zabdiel"] ));
 console.log(secretNamefunction( ['Phoebe', 'Ross', 'Chandler', 'Joey', 'Monica', 'Rachel'] ));
 console.log(secretNamefunction( ['Harry', 'Ron', 'Hermione'] ));
 
-
-
-
 // onlineStatus(['mockIng99', 'J0eyPunch', 'glassedFer']) -> 'mockIng99, J0eyPunch and one 1 more online'
+const onlineStatus = (arr) => arr.reduce((a,r) => a+ r.slice(0,1) ,0)
 
+console.log(onlineStatus(['mockIng99', 'J0eyPunch', 'glassedFer']));
 // Promedio antipode
 // Crear una funcion que tome 2 parametros, (numero, longitud) y regrse un array de longitud cantidad de numeros multiplos del numero por parametro
 // arrayMultiplos(2, 10) -> [2, 4, 6, 8, 10, 12, 14, 16, 18, 20]
