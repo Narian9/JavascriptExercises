@@ -15,7 +15,7 @@ console.log(secretNamefunction( ['Phoebe', 'Ross', 'Chandler', 'Joey', 'Monica',
 console.log(secretNamefunction( ['Harry', 'Ron', 'Hermione'] ));
 
 // onlineStatus(['mockIng99', 'J0eyPunch', 'glassedFer']) -> 'mockIng99, J0eyPunch and one 1 more online'
-const onlineStatus = (arr) => arr.reduce((a,r) => a+ r.slice(0,1) ,0)
+const onlineStatus = (arr) => `${arr.slice(0,arr.length-1).reduce((a,r) => a +", "+ r ,)} and one more online`
 
 console.log(onlineStatus(['mockIng99', 'J0eyPunch', 'glassedFer']));
 // Promedio antipode
