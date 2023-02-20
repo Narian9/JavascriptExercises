@@ -148,8 +148,34 @@ console.log(oneOrZero(0));
 console.log(oneOrZero(1));
 // Messenger bzzz
 // (0 ) n
+
 // Si no hay nadie -> "No hay nadie en linea"
 // Si hay 1 persona -> "user1 esta en linea"
 // Si hay 2 personas -> "user1 y user2 estan en linea"
 // Si hay n>2 personas, "user1 y n-1 mas estan en linea"
 
+const messengerBz =(usersOnline, text="") =>{
+    let outputText = text;
+    //console.log(usersOnline, text);
+    if(usersOnline == 0 && text.length ==0){
+        return "No hay nadie en linea";
+    }else if ( usersOnline ==1 && text.length ==0){
+        return `user${usersOnline} esta en linea` 
+    }else if (usersOnline>1 ){
+        outputText = `, user${usersOnline}`+ text;
+       //console.log(usersOnline-1,outputText);
+       
+    }else if(usersOnline ==1 && text.length!==0){
+        //console.log(usersOnline, outputText, 1);
+        outputText =`User${usersOnline} y${text} están en linea` ;
+        messengerBz(usersOnline-1,outputText);
+    }else {
+        return outputText;
+    }
+    return (usersOnline>1)?messengerBz(usersOnline-1,outputText):outputText;
+}
+// console.log( ("").length);
+// console.log( messengerBz(0) );
+console.log( messengerBz(1) );
+console.log( messengerBz(3) );
+console.log( messengerBz(5) );//User1 y, user2, user3, user4, user5 están en linea
