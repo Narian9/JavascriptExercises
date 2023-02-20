@@ -15,13 +15,24 @@ console.log(secretNamefunction( ['Phoebe', 'Ross', 'Chandler', 'Joey', 'Monica',
 console.log(secretNamefunction( ['Harry', 'Ron', 'Hermione'] ));
 
 // onlineStatus(['mockIng99', 'J0eyPunch', 'glassedFer']) -> 'mockIng99, J0eyPunch and one 1 more online'
-const onlineStatus = (arr) => `${arr.slice(0,arr.length-1).reduce((a,r) => a +", "+ r ,)} and one more online`
+const onlineStatus = (arr) => `${arr.slice(0,arr.length-1).reduce((a,r) => a +", "+ r ,)} and one more online`;
 
 console.log(onlineStatus(['mockIng99', 'J0eyPunch', 'glassedFer']));
+
 // Promedio antipode
-// Crear una funcion que tome 2 parametros, (numero, longitud) y regrse un array de longitud cantidad de numeros multiplos del numero por parametro
+// Crear una funcion que tome 2 parametros, (numero, longitud) 
+//y regrse un array de longitud cantidad de numeros multiplos del numero por parametro
 // arrayMultiplos(2, 10) -> [2, 4, 6, 8, 10, 12, 14, 16, 18, 20]
 // arrayMultiplos(17, 6) -> [17, 34, 51, 68, 85, 102]
+const arrayMultiplos = (number1, parameter) =>{
+    const outputArray = []
+    for (let i = 1; i <= parameter; i++) {
+        outputArray.push(i*number1);        
+    }
+    return outputArray;
+}
+console.log(arrayMultiplos(2,10));
+console.log(arrayMultiplos(17,6));
 
 
 // Escrbir una funcion que descubra si el array es dominante positivo
