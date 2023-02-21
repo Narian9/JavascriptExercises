@@ -51,3 +51,18 @@ console.log(positiveDom([-1, -3, 4, 6767]));//true
 // - Sumar cada numero de la primera parte con los numeros inversos de la segunda parte
 // [1,2,3] [5,22,6] -> 1 + 6, 2 + 22, 3 + 5 -> [7, 24, 8]
 // - Dividir cada numero del array final entre 2  -> [3.5, 12, 4]
+
+const promedioAntipode = ( array ) => {
+    const [array1,array2] = ( array.length % 2 === 0) ? [array.slice(0, array.length/2), array.slice(array.length/2, array.length)]:[array.slice(0, array.length/2), array.slice(array.length/2+1, array.length)];
+    
+    const output=[]
+    for (let i = 0, j =array2.length-1; i < array1.length; i++, j--) {         
+          output.push((array1[i]+array2[j]) /2)
+         };
+
+    return output;
+}
+console.log();
+console.log(promedioAntipode([1,2,3,5,22,6]));//[ 3.5, 12, 4 ]
+console.log();
+console.log(promedioAntipode([1,2,3,5,22,6,10]));//[ 5.5, 4, 12.5 ]
