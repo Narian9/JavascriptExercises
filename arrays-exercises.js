@@ -38,6 +38,11 @@ console.log(arrayMultiplos(17,6));
 // Escrbir una funcion que descubra si el array es dominante positivo
 // Un array es positivo dominante cuando la mayoria de sus elementos son positivos -> [1, -2, 55, 10]
 // positiveDom([-1, -3, -5, 4, 6767]) -> false
+const positiveDom = (arr) => arr.filter(e => e<0).length < arr.filter(e => e>0).length ? true:false;
+
+console.log(positiveDom([-1, -3, -5, 4, 6767]));//false
+console.log(positiveDom([-1, -3, 5, 4, 6767]));//true
+console.log(positiveDom([-1, -3, 4, 6767]));//true
 
 
 // Promedio antipode
